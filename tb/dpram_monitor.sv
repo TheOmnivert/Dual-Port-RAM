@@ -1,27 +1,21 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Created by : Gourav Chandra Naidu
-//Environment 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class dpram_env extends uvm_env;
-	
-	`uvm_components_utils(dpram_env)
+class dpram_monitor extends uvm_monitor
+
+	`uvm_component_utils (dpram_monitor)
 	
 	function new (string name, uvm_component parent);
-		super.new(name,parent);
+		super.new(name, this);
 	endfunction
 	
 	function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
-		
-		
-		
 	endfunction
 	
-	function new connect_phase(uvm_phase phase);
+	function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
-		
-		
 	endfunction
 	
 endclass
